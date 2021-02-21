@@ -126,7 +126,7 @@ Any section of this document discussing tokenization has been verified with eith
 Functionalities of certain characters have been found and described thanks to the development of `world info formatting` but it's useful to discuss these beforehand. Their functionality can be somewhat verified through the tokenizer Colab. Some characters connect. The most important of these is `-`. `hair-color` or `red-color` are words that get better results for colorization than other methods (may depend on format and order of traits). `-hue` doesn't work as well but may be used. Other characters have been tried for connecting words, but few show as much power in scenario testing. As a matter of fact often you can string random words together which will be discussed later. AID recognizes many separators. Letters , '' "" ; / | all separate words and concepts in rough degree of power. You would want to separate members of a list with , like in common grammar, but ; might be better for separating categories. Inside brackets `/` is useful for keeping the traits related to what they are describing. () {} [] <> : are connectors. You can put lists inside all of them or use `:` to create a logical implication. For example it might be preferred to do a list like `MENTAL:[happy, go-lucky, energetic];` and define logical connections like `AGE(25y)` or `sword(polished)` the AI usually recognizes that the thing you're describing is roughly 25 years old or that the sword is polished. Enclosures can be interchanged, but these are two commonly seen and powerful methods.
 
 **The above used to be the case.** Whenever OpenAI or Latitude updates their back-end models, the significance of a character may change. As of January 2021 `-` works more like the mathematical minus sign. An example is provided in the document of doing pseudo-math inside AID. It is preferable to mashup words that are normally separated by `-` together inside the WI entry.  
-https://files.catbox.moe/8y17ji.png
+![Pseudo-math](/imgs/pseudoMath.png "https://files.catbox.moe/8y17ji.png")
 
 < and > are special characters. You may have noticed in do or say mode the AI always prefaces your inputs in the story with `>`. In AID the character is reserved for this purpose. You may have noticed that the AI *never* outputs < or > on its own. Since the information inside WI is handled differently we can still use any unicode letter inside it. In WI this can be used to our benefit as we will see when we discuss the work Zaltys has done and his formatting. The uses we have discovered for < and > are particularly useful, because they are unlikely to change even with future updates unless Latitude decides to drastically change their AI model.
 
@@ -665,7 +665,7 @@ https://files.catbox.moe/udidts.PNG
 Title: Symbol use  
 Updated 10 Jan 2021:  
 `-` `'-'` and `()` are no longer effective. They are treated more like math symbols by the AI now. Onyx has done extensive testing on the Discord to showcase the AI's creative math abilities. 
-https://files.catbox.moe/8y17ji.png
+![Pseudo-math](/imgs/pseudoMath.png "https://files.catbox.moe/8y17ji.png")
 
 Title: Legacy Zaltys Deekin & Aarakocra late 2020 edition
 Updated 10 Jan 2021:  
