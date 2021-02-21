@@ -319,7 +319,7 @@ The AI tends to be very literal-minded about certain things. The associative pow
 `APPEAR:` is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
 
 `WORN:` is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
-https://files.catbox.moe/0ur88f.PNG
+![DRESS vs CLOTHES](/imgs/zaltys-dress-clothes.png "https://files.catbox.moe/0ur88f.PNG")
 
 `DESC:` sees some use. It relates to the physical functionality of an entity and may be more useful than `APPEAR:` for specific cases where the functionality is more important than the looks of a thing. `DESC:` might as well as be used for describing the functional limbs of a huge insect or to describe the mechanisms and staff inside a spaceship. Testing from many enthusiasts also suggests that with `DESC:` and optionally prose descriptions at the front, the AI recognizes and uses other categories better.
 
