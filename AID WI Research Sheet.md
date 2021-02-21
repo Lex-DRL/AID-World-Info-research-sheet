@@ -660,8 +660,8 @@ Title: Old style heavy encapsulation and categories
 Created before 14 Dec 2020, deprecated shortly afterwards  
 Updated 8 Feb 2021  
 A lot of methods have been tried before you and have been phased out whenever the AI stopped working with them. Here we list a few with pictures, including the curiosity known as Ritz. Maybe they might be useful one day again. birb doesn't claim credit for coming up with anything because there is always someone trying out different things inside AID before you. Fun fact: Rick the Angriest Wizard is actually based on Dave the Angriest Wizard from 4chan's prompts.  
-https://files.catbox.moe/5vo8kw.PNG  
-https://files.catbox.moe/udidts.PNG  
+![Heavy encapsulation 1](/imgs/heavy-encapsulation-1.png "https://files.catbox.moe/5vo8kw.PNG")
+![Heavy encapsulation 2](/imgs/heavy-encapsulation-2.png "https://files.catbox.moe/udidts.PNG")
 
 Title: Symbol use  
 Updated 10 Jan 2021:  
