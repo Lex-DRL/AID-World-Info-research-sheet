@@ -116,7 +116,8 @@ It can not be understated what an important tool the tokenizer has been for WI e
 A common misconception is that """natural writing""" is clearly the best writing method and all other methods and tricks should be ignored because some marketing person said so. To these people I must tell: Stop. You don't know what you're talking about and are likely arguing from emotion. Machine Learning language transformation algorithms expose their training biases through tokens. You can check the tokens through the tokenizers. They are the same for GPT-2/3 and the Griffin and Dragon model trained off GPT-3. The GPT-3 has eaten a massive amount of online datasets, not restricted to plain English. Tokens exist for html comment wrappers like `<!--` and `-->`. This means they were a relevant part of the GPT-3 training and will be recognized by any AI program using the same algorithms.
 
 Input the string `  SolidGoldMagikarp` into the tokenizers above. This nonsense word is one token I kid you not. One possible explanation for this we've found is reddit.com/r/SolidGoldMagikarp/ although the true source of the token remains unknown. `================================` and many other chapter breakers are one token too. This means GPT-3 strongly recognizes these strings and gave them a unique definition inside of its tokens. The AI has eaten data from a plethora of writing sources. You can further train GPT-3 to specialize on other forms of writing, as Latitude did with CYOAs for the AID models. That is an official statement. The author would have preferred they focused on high quality prose novels like the Witcher series or Dune (copyright problems), but we live with the tool given to us. We provide pictures of two posts by Gnurro as he researched the topic of unusual tokens:  
-https://files.catbox.moe/xj9a6a.PNG	https://files.catbox.moe/qz4hwx.PNG
+![Unusual tokens 1](/imgs/unusualTokens-1.png "https://files.catbox.moe/xj9a6a.PNG")
+![Unusual tokens 1](/imgs/unusualTokens-2.png "https://files.catbox.moe/qz4hwx.PNG")
 
 Any section of this document discussing tokenization has been verified with either of the above tools.
 
@@ -125,7 +126,7 @@ Any section of this document discussing tokenization has been verified with eith
 Functionalities of certain characters have been found and described thanks to the development of `world info formatting` but it's useful to discuss these beforehand. Their functionality can be somewhat verified through the tokenizer Colab. Some characters connect. The most important of these is `-`. `hair-color` or `red-color` are words that get better results for colorization than other methods (may depend on format and order of traits). `-hue` doesn't work as well but may be used. Other characters have been tried for connecting words, but few show as much power in scenario testing. As a matter of fact often you can string random words together which will be discussed later. AID recognizes many separators. Letters , '' "" ; / | all separate words and concepts in rough degree of power. You would want to separate members of a list with , like in common grammar, but ; might be better for separating categories. Inside brackets `/` is useful for keeping the traits related to what they are describing. () {} [] <> : are connectors. You can put lists inside all of them or use `:` to create a logical implication. For example it might be preferred to do a list like `MENTAL:[happy, go-lucky, energetic];` and define logical connections like `AGE(25y)` or `sword(polished)` the AI usually recognizes that the thing you're describing is roughly 25 years old or that the sword is polished. Enclosures can be interchanged, but these are two commonly seen and powerful methods.
 
 **The above used to be the case.** Whenever OpenAI or Latitude updates their back-end models, the significance of a character may change. As of January 2021 `-` works more like the mathematical minus sign. An example is provided in the document of doing pseudo-math inside AID. It is preferable to mashup words that are normally separated by `-` together inside the WI entry.  
-https://files.catbox.moe/8y17ji.png
+![Pseudo-math](/imgs/pseudoMath.png "https://files.catbox.moe/8y17ji.png")
 
 < and > are special characters. You may have noticed in do or say mode the AI always prefaces your inputs in the story with `>`. In AID the character is reserved for this purpose. You may have noticed that the AI *never* outputs < or > on its own. Since the information inside WI is handled differently we can still use any unicode letter inside it. In WI this can be used to our benefit as we will see when we discuss the work Zaltys has done and his formatting. The uses we have discovered for < and > are particularly useful, because they are unlikely to change even with future updates unless Latitude decides to drastically change their AI model.
 
@@ -282,7 +283,8 @@ With formatting methods like JSON, pseudo-JSON, Zaltys and its relatives we've n
 
 There are three types of category: Propercase, lowercase and UPPERCASE. Any of them may be used and is down to user preference. Due to the history of WI research we focus on the UPPERCASE category. UPPERCASE is good because it clearly distinguishes the category word from the list associated with it or any other formatting you may use. UPPERCASE tokenizes differently from categories in other cases and should be tested with the tokenizer especially when trying to incorporate fresh categories the writer came up with themselves. It has been found that if a unique word contains tokens of a shorthand, that shorthand tends to work very effectively e.g. `APPEARANCE && APPEAR` and `SUMMARY && SUMM`.
 
-Here we have a picture of some common UPPERCASE category basis and their tokenization: https://files.catbox.moe/avn9j4.png
+Here we have a picture of some common UPPERCASE category basis and their tokenization:
+![CATEGORY tokens](/imgs/cat-tokens.png "https://files.catbox.moe/avn9j4.png")
 
 The above tokenization is the reason Zaltys and other enthusiasts ended up picking APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. If a WI enthusiast tells you that a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results weren't good with evidence to support this.
 
@@ -317,7 +319,7 @@ The AI tends to be very literal-minded about certain things. The associative pow
 `APPEAR:` is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
 
 `WORN:` is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
-https://files.catbox.moe/0ur88f.PNG
+![DRESS vs CLOTHES](/imgs/zaltys-dress-clothes.png "https://files.catbox.moe/0ur88f.PNG")
 
 `DESC:` sees some use. It relates to the physical functionality of an entity and may be more useful than `APPEAR:` for specific cases where the functionality is more important than the looks of a thing. `DESC:` might as well as be used for describing the functional limbs of a huge insect or to describe the mechanisms and staff inside a spaceship. Testing from many enthusiasts also suggests that with `DESC:` and optionally prose descriptions at the front, the AI recognizes and uses other categories better.
 
@@ -519,7 +521,7 @@ Lillie:[Human female. Her eyes are blue. Her hair is blonde. Her hairstyle is lo
 ```
 When you examine Lillie in the story and have the AI describe what she is wearing you will get an output like the following very consistently: `She's wearing a nightfall raiment. The dress consists of detached white sleeves and shows the armpits. The bust and the frills of the dress are white while the rest is black. Kneehigh boots are a part of the outfit.` When tested on other outfits `the clothing consists of` was a very good input to continue from for the story. This was demonstrated on Discord. The above example combines almost-Caveman with Zaltys. If you use a style like this, you must make it conform to your writing style. Zaltys calls the uncategorized part of his format the indicator. This is usually details like sex species and age. In the Lillie example species, sex and colors were indicators. birb always wants the AI to describe the traits of the characters in the format `Her eyes are X color. Her hair is Y color in Z style.` This is why this type of WI works for his scenarios. Also, if the AI starts describing the clothing of the character before you get to ask what the character is wearing, it will usually output the wrong set of clothes. First the story must mention the name of the outfit, then it will use the correct WI to describe the clothes.
 The document now provides evidence for certain methods working. Included is a gif of the outfit being in use. You will have to take the author's word that the AI can consistently mention the outfit and then describe it.
-https://files.catbox.moe/9dibjo.gif
+![Outfit in use](/imgs/outfit-in-use.png "https://files.catbox.moe/9dibjo.gif")
 
 For a period of time birb also used formatting commonly referred to as Ritz as she was the character he first posted an example of. This was abandoned as a historic curiosity after a 300k character long adventure. If requested, more examples may be provided in the obsoleted methods category.
 
@@ -658,13 +660,13 @@ Title: Old style heavy encapsulation and categories
 Created before 14 Dec 2020, deprecated shortly afterwards  
 Updated 8 Feb 2021  
 A lot of methods have been tried before you and have been phased out whenever the AI stopped working with them. Here we list a few with pictures, including the curiosity known as Ritz. Maybe they might be useful one day again. birb doesn't claim credit for coming up with anything because there is always someone trying out different things inside AID before you. Fun fact: Rick the Angriest Wizard is actually based on Dave the Angriest Wizard from 4chan's prompts.  
-https://files.catbox.moe/5vo8kw.PNG  
-https://files.catbox.moe/udidts.PNG  
+![Heavy encapsulation 1](/imgs/heavy-encapsulation-1.png "https://files.catbox.moe/5vo8kw.PNG")
+![Heavy encapsulation 2](/imgs/heavy-encapsulation-2.png "https://files.catbox.moe/udidts.PNG")
 
 Title: Symbol use  
 Updated 10 Jan 2021:  
 `-` `'-'` and `()` are no longer effective. They are treated more like math symbols by the AI now. Onyx has done extensive testing on the Discord to showcase the AI's creative math abilities. 
-https://files.catbox.moe/8y17ji.png
+![Pseudo-math](/imgs/pseudoMath.png "https://files.catbox.moe/8y17ji.png")
 
 Title: Legacy Zaltys Deekin & Aarakocra late 2020 edition
 Updated 10 Jan 2021:  
