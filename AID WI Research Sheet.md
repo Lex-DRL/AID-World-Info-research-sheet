@@ -283,7 +283,8 @@ With formatting methods like JSON, pseudo-JSON, Zaltys and its relatives we've n
 
 There are three types of category: Propercase, lowercase and UPPERCASE. Any of them may be used and is down to user preference. Due to the history of WI research we focus on the UPPERCASE category. UPPERCASE is good because it clearly distinguishes the category word from the list associated with it or any other formatting you may use. UPPERCASE tokenizes differently from categories in other cases and should be tested with the tokenizer especially when trying to incorporate fresh categories the writer came up with themselves. It has been found that if a unique word contains tokens of a shorthand, that shorthand tends to work very effectively e.g. `APPEARANCE && APPEAR` and `SUMMARY && SUMM`.
 
-Here we have a picture of some common UPPERCASE category basis and their tokenization: https://files.catbox.moe/avn9j4.png
+Here we have a picture of some common UPPERCASE category basis and their tokenization:
+![CATEGORY tokens](/imgs/cat-tokens.png "https://files.catbox.moe/avn9j4.png")
 
 The above tokenization is the reason Zaltys and other enthusiasts ended up picking APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. If a WI enthusiast tells you that a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results weren't good with evidence to support this.
 
